@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S4tori | Portfolio</title>
+    <style>
+        :root {
+            --bg: #1a1a1a;
+            --text: #f5f5f5;
+            --accent: #bc002d; /* Японський червоний */
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Вертикальний текст збоку */
+        .sideways-text {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 5rem;
+            z-index: -1;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+        }
+
+        .kanji {
+            font-size: 2rem;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 100px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #333;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .collage-item {
+            background: #222;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #333;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .item-1 { grid-column: span 2; grid-row: span 2; background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhiaDh9IcivCgygX3JmH5IALu7tKm1VWeOQ&s); } 
+        .item-2 { grid-column: span 2; background-image: url('https://i.ytimg.com/vi/YYkPgEw-3FM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC-kamzyu43NBuVFvYyasybl0OKew'); }
+        .item-3 { background-image: url('https://i.pinimg.com/474x/f2/94/4c/f2944ca980c7e2e28aa3445775a81071.jpg'); }
+        .item-4 { background-image: url('https://i.pinimg.com/750x/54/4a/fc/544afc70665ea723b3b46e23b85b1f04.jpg'); }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sideways-text">ポートフォリオ</div>
+
+    <header>
+        <span class="kanji">デニス・ダヴィドキン</span>
+        <h1>Denys</h1>
+        <p>Розробник • Автомобільний ентузіаст • Студент</p>
+    </header>
+
+    <section id="interests">
+        <h2>Інтереси // 興味</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Python & Web Dev</h3>
+                <p>Створення GUI на PySide6 та розробка сучасних веб-інтерфейсів. Код - це мистецтво.</p>
+            </div>
+            <div class="card">
+                <h3>Sim Racing & Flight</h3>
+                <p>War Thunder (авіація) та GT3 серії в Le Mans Ultimate. Швидкість та точність у кожному русі.</p>
+            </div>
+            <div class="card">
+                <h3>High-Tech</h3>
+                <p>Слідкую за еволюцією флагманів та якісним звуком від FiiO.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="audi-section">
+        <h2>Естетика мрії: Nissan GT-R R35 // 日産</h2>
+        <p>Японська інженерія, як частина мрії.</p>
+        <div class="collage">
+            <div class="collage-item item-1">CAR</div>
+            <div class="collage-item item-2"></div>
+            <div class="collage-item item-3">THAT KILLED</div>
+            <div class="collage-item item-4">PORSCHE</div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 SVINOMESON. Зроблено з душею в Дніпрі.
+    </footer>
+
+</body>
+</html>
